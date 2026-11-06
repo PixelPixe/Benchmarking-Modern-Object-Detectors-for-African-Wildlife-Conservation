@@ -1,0 +1,9 @@
+{
+  "model": "fasterrcnn",
+  "mode": "uniform640",
+  "repeat": 2,
+  "mod_median": 36.35150000627618,
+  "mod_iqr": 4.658599995309487,
+  "e2e_median": 44.159400000353344,
+  "e2e_iqr": 9.544899992761202
+}

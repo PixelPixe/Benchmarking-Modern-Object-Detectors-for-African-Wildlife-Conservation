@@ -1,0 +1,75 @@
+{
+  "num_images": 145,
+  "per_model_summary": [
+    {
+      "Model": "YOLOv8m",
+      "Native Resolution": "640x640",
+      "Model Latency (ms)": "24.23 \u00b1 10.78",
+      "Model FPS": 41.3,
+      "E2E Latency (ms)": "37.16 \u00b1 16.14",
+      "E2E FPS": 26.9,
+      "E2E Min (ms)": 18.92,
+      "E2E Max (ms)": 105.81,
+      "raw_model_mean_ms": 24.23,
+      "raw_model_std_ms": 10.78,
+      "raw_e2e_mean_ms": 37.16,
+      "raw_e2e_std_ms": 16.14
+    },
+    {
+      "Model": "YOLOv8n",
+      "Native Resolution": "640x640",
+      "Model Latency (ms)": "18.03 \u00b1 11.89",
+      "Model FPS": 55.5,
+      "E2E Latency (ms)": "30.92 \u00b1 17.29",
+      "E2E FPS": 32.3,
+      "E2E Min (ms)": 11.27,
+      "E2E Max (ms)": 143.31,
+      "raw_model_mean_ms": 18.03,
+      "raw_model_std_ms": 11.89,
+      "raw_e2e_mean_ms": 30.92,
+      "raw_e2e_std_ms": 17.29
+    },
+    {
+      "Model": "Faster R-CNN",
+      "Native Resolution": "800-1333",
+      "Model Latency (ms)": "105.84 \u00b1 26.14",
+      "Model FPS": 9.4,
+      "E2E Latency (ms)": "121.96 \u00b1 33.19",
+      "E2E FPS": 8.2,
+      "E2E Min (ms)": 69.49,
+      "E2E Max (ms)": 276.15,
+      "raw_model_mean_ms": 105.84,
+      "raw_model_std_ms": 26.14,
+      "raw_e2e_mean_ms": 121.96,
+      "raw_e2e_std_ms": 33.19
+    },
+    {
+      "Model": "DETR",
+      "Native Resolution": "800-1333",
+      "Model Latency (ms)": "82.41 \u00b1 22.44",
+      "Model FPS": 12.1,
+      "E2E Latency (ms)": "191.90 \u00b1 60.59",
+      "E2E FPS": 5.2,
+      "E2E Min (ms)": 91.86,
+      "E2E Max (ms)": 367.05,
+      "raw_model_mean_ms": 82.41,
+      "raw_model_std_ms": 22.44,
+      "raw_e2e_mean_ms": 191.9,
+      "raw_e2e_std_ms": 60.59
+    },
+    {
+      "Model": "EfficientDet-D2",
+      "Native Resolution": "512x512",
+      "Model Latency (ms)": "107.94 \u00b1 58.82",
+      "Model FPS": 9.3,
+      "E2E Latency (ms)": "133.75 \u00b1 68.00",
+      "E2E FPS": 7.5,
+      "E2E Min (ms)": 56.2,
+      "E2E Max (ms)": 414.15,
+      "raw_model_mean_ms": 107.94,
+      "raw_model_std_ms": 58.82,
+      "raw_e2e_mean_ms": 133.75,
+      "raw_e2e_std_ms": 68.0
+    }
+  ]
+}

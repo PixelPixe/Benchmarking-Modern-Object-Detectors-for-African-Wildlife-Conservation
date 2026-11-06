@@ -1,0 +1,9 @@
+{
+  "model": "efficientdet",
+  "mode": "native",
+  "repeat": 1,
+  "mod_median": 49.412299995310605,
+  "mod_iqr": 4.908699993393384,
+  "e2e_median": 65.62760000815615,
+  "e2e_iqr": 8.10879998607561
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "model": "yolov8m",
+    "mAP": 0.7773407542812418,
+    "AP50": 0.9042523369045044,
+    "AP75": 0.8482137653858344,
+    "model_latency_mean_ms": 14.63,
+    "model_latency_std_ms": 0.27,
+    "model_fps": 68.4,
+    "e2e_latency_mean_ms": 21.37,
+    "e2e_latency_std_ms": 1.66,
+    "e2e_fps": 46.8,
+    "params_M": 25.86,
+    "gflops": 79.1
+  },
+  {
+    "model": "yolov8n",
+    "mAP": 0.7442603573521196,
+    "AP50": 0.8856867387319591,
+    "AP75": 0.8161390457234512,
+    "model_latency_mean_ms": 9.49,
+    "model_latency_std_ms": 0.57,
+    "model_fps": 105.4,
+    "e2e_latency_mean_ms": 20.0,
+    "e2e_latency_std_ms": 1.35,
+    "e2e_fps": 50.0,
+    "params_M": 3.01,
+    "gflops": 8.2
+  },
+  {
+    "model": "fasterrcnn",
+    "mAP": 0.7015949542588348,
+    "AP50": 0.9008155884117712,
+    "AP75": 0.8299704719347812,
+    "model_latency_mean_ms": 43.24,
+    "model_latency_std_ms": 1.29,
+    "model_fps": 23.1,
+    "e2e_latency_mean_ms": 55.8,
+    "e2e_latency_std_ms": 2.4,
+    "e2e_fps": 17.9,
+    "params_M": 41.31,
+    "gflops": 181.5
+  },
+  {
+    "model": "detr",
+    "mAP": 0.6750145710527078,
+    "AP50": 0.8582797966602883,
+    "AP75": 0.742889694854885,
+    "model_latency_mean_ms": 30.99,
+    "model_latency_std_ms": 0.88,
+    "model_fps": 32.3,
+    "e2e_latency_mean_ms": 70.8,
+    "e2e_latency_std_ms": 2.64,
+    "e2e_fps": 14.1,
+    "params_M": 41.5,
+    "gflops": 75.8
+  },
+  {
+    "model": "efficientdet",
+    "mAP": 0.596583021639497,
+    "AP50": 0.8490004082043002,
+    "AP75": 0.6858402459971049,
+    "model_latency_mean_ms": 46.08,
+    "model_latency_std_ms": 3.05,
+    "model_fps": 21.7,
+    "e2e_latency_mean_ms": 78.26,
+    "e2e_latency_std_ms": 3.15,
+    "e2e_fps": 12.8,
+    "params_M": 8.01,
+    "gflops": 13.4
+  }
+]

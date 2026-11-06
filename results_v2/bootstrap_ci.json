@@ -1,0 +1,54 @@
+{
+  "comparison_yolov8m_vs_fasterrcnn": {
+    "mAP_5_95": {
+      "orig_delta": 0.0757,
+      "boot_mean": 0.0743,
+      "boot_std": 0.0121,
+      "ci_lower_95": 0.0511,
+      "ci_upper_95": 0.0978,
+      "p_value": 0.0
+    },
+    "AP_50": {
+      "orig_delta": 0.0034,
+      "boot_mean": 0.0009,
+      "boot_std": 0.0113,
+      "ci_lower_95": -0.022,
+      "ci_upper_95": 0.0239,
+      "p_value": 0.932
+    },
+    "AP_75": {
+      "orig_delta": 0.0182,
+      "boot_mean": 0.0157,
+      "boot_std": 0.0164,
+      "ci_lower_95": -0.017,
+      "ci_upper_95": 0.0485,
+      "p_value": 0.324
+    }
+  },
+  "comparison_yolov8m_vs_yolov8n": {
+    "mAP_5_95": {
+      "orig_delta": 0.0331,
+      "boot_mean": 0.0312,
+      "boot_std": 0.0115,
+      "ci_lower_95": 0.0082,
+      "ci_upper_95": 0.0549,
+      "p_value": 0.0
+    },
+    "AP_50": {
+      "orig_delta": 0.0186,
+      "boot_mean": 0.0157,
+      "boot_std": 0.0109,
+      "ci_lower_95": -0.0055,
+      "ci_upper_95": 0.0381,
+      "p_value": 0.12
+    },
+    "AP_75": {
+      "orig_delta": 0.0321,
+      "boot_mean": 0.0303,
+      "boot_std": 0.0185,
+      "ci_lower_95": -0.0043,
+      "ci_upper_95": 0.0675,
+      "p_value": 0.096
+    }
+  }
+}

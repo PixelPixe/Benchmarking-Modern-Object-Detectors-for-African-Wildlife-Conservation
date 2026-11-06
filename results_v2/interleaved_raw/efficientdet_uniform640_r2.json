@@ -1,0 +1,9 @@
+{
+  "model": "efficientdet",
+  "mode": "uniform640",
+  "repeat": 2,
+  "mod_median": 47.726299992064014,
+  "mod_iqr": 4.813699997612275,
+  "e2e_median": 67.12700000207406,
+  "e2e_iqr": 7.198799983598292
+}

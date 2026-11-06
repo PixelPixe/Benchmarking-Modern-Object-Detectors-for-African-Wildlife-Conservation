@@ -1,0 +1,9 @@
+{
+  "model": "fasterrcnn",
+  "mode": "native",
+  "repeat": 1,
+  "mod_median": 91.41740000632126,
+  "mod_iqr": 8.58579998021014,
+  "e2e_median": 97.74789999937639,
+  "e2e_iqr": 12.873500003479421
+}

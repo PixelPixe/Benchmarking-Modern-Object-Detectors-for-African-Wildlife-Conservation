@@ -1,0 +1,72 @@
+[
+  {
+    "model": "yolov8m",
+    "resolution": "640x640",
+    "forward_median_ms": 14.8,
+    "forward_iqr_ms": 0.9,
+    "forward_fps": 67.7,
+    "e2e_median_ms": 22.7,
+    "e2e_iqr_ms": 4.6,
+    "e2e_fps": 44.1,
+    "forward_mean_ms": 15.67,
+    "forward_std_ms": 1.91,
+    "e2e_mean_ms": 24.84,
+    "e2e_std_ms": 10.27
+  },
+  {
+    "model": "yolov8n",
+    "resolution": "640x640",
+    "forward_median_ms": 11.1,
+    "forward_iqr_ms": 1.6,
+    "forward_fps": 89.8,
+    "e2e_median_ms": 17.3,
+    "e2e_iqr_ms": 6.6,
+    "e2e_fps": 57.8,
+    "forward_mean_ms": 11.36,
+    "forward_std_ms": 1.4,
+    "e2e_mean_ms": 19.31,
+    "e2e_std_ms": 6.6
+  },
+  {
+    "model": "fasterrcnn",
+    "resolution": "640x640",
+    "forward_median_ms": 44.4,
+    "forward_iqr_ms": 1.7,
+    "forward_fps": 22.5,
+    "e2e_median_ms": 47.5,
+    "e2e_iqr_ms": 13.9,
+    "e2e_fps": 21.0,
+    "forward_mean_ms": 45.59,
+    "forward_std_ms": 4.48,
+    "e2e_mean_ms": 53.2,
+    "e2e_std_ms": 16.09
+  },
+  {
+    "model": "detr",
+    "resolution": "640x640",
+    "forward_median_ms": 35.3,
+    "forward_iqr_ms": 2.8,
+    "forward_fps": 28.3,
+    "e2e_median_ms": 64.7,
+    "e2e_iqr_ms": 19.2,
+    "e2e_fps": 15.5,
+    "forward_mean_ms": 36.01,
+    "forward_std_ms": 3.4,
+    "e2e_mean_ms": 68.21,
+    "e2e_std_ms": 14.82
+  },
+  {
+    "model": "efficientdet",
+    "resolution": "640x640",
+    "forward_median_ms": 65.6,
+    "forward_iqr_ms": 6.4,
+    "forward_fps": 15.3,
+    "e2e_median_ms": 90.2,
+    "e2e_iqr_ms": 11.4,
+    "e2e_fps": 11.1,
+    "forward_mean_ms": 66.66,
+    "forward_std_ms": 6.72,
+    "e2e_mean_ms": 92.77,
+    "e2e_std_ms": 9.92
+  }
+]

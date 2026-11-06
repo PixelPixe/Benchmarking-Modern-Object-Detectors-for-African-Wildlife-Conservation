@@ -1,0 +1,245 @@
+{
+  "telemetry_start": {
+    "gpu_name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "driver_version": "610.74",
+    "temperature_c": 49.0,
+    "utilization_pct": 0.0,
+    "graphics_clock_mhz": 2130.0,
+    "memory_clock_mhz": 8001.0,
+    "power_draw_w": 12.4,
+    "pstate": "P0"
+  },
+  "telemetry_end": {
+    "gpu_name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "driver_version": "610.74",
+    "temperature_c": 58.0,
+    "utilization_pct": 45.0,
+    "graphics_clock_mhz": 1290.0,
+    "memory_clock_mhz": 8001.0,
+    "power_draw_w": 16.61,
+    "pstate": "P0"
+  },
+  "native_benchmarks": [
+    {
+      "model": "yolov8m",
+      "res_mode": "native",
+      "resolution": "640x640",
+      "params_m": 25.86,
+      "gflops": 79.1,
+      "model_latency_mean_ms": 14.88,
+      "model_latency_std_ms": 1.81,
+      "model_fps": 67.2,
+      "e2e_latency_mean_ms": 29.6,
+      "e2e_latency_std_ms": 0.91,
+      "e2e_fps": 33.8
+    },
+    {
+      "model": "yolov8n",
+      "res_mode": "native",
+      "resolution": "640x640",
+      "params_m": 3.01,
+      "gflops": 8.2,
+      "model_latency_mean_ms": 9.53,
+      "model_latency_std_ms": 0.59,
+      "model_fps": 104.9,
+      "e2e_latency_mean_ms": 20.8,
+      "e2e_latency_std_ms": 1.45,
+      "e2e_fps": 48.1
+    },
+    {
+      "model": "fasterrcnn",
+      "res_mode": "native",
+      "resolution": "800x1333 (native)",
+      "params_m": 41.31,
+      "gflops": 350.4,
+      "model_latency_mean_ms": 80.74,
+      "model_latency_std_ms": 1.19,
+      "model_fps": 12.4,
+      "e2e_latency_mean_ms": 108.61,
+      "e2e_latency_std_ms": 2.76,
+      "e2e_fps": 9.2
+    },
+    {
+      "model": "detr",
+      "res_mode": "native",
+      "resolution": "800x1333 (native)",
+      "params_m": 41.5,
+      "gflops": 156.1,
+      "model_latency_mean_ms": 57.42,
+      "model_latency_std_ms": 1.67,
+      "model_fps": 17.4,
+      "e2e_latency_mean_ms": 135.67,
+      "e2e_latency_std_ms": 2.87,
+      "e2e_fps": 7.4
+    },
+    {
+      "model": "efficientdet",
+      "res_mode": "native",
+      "resolution": "512x512",
+      "params_m": 8.01,
+      "gflops": 8.6,
+      "model_latency_mean_ms": 45.75,
+      "model_latency_std_ms": 2.88,
+      "model_fps": 21.9,
+      "e2e_latency_mean_ms": 71.0,
+      "e2e_latency_std_ms": 2.86,
+      "e2e_fps": 14.1
+    }
+  ],
+  "uniform_640_benchmarks": [
+    {
+      "model": "yolov8m",
+      "res_mode": "640",
+      "resolution": "640x640",
+      "params_m": 25.86,
+      "gflops": 79.1,
+      "model_latency_mean_ms": 14.92,
+      "model_latency_std_ms": 2.17,
+      "model_fps": 67.0,
+      "e2e_latency_mean_ms": 29.23,
+      "e2e_latency_std_ms": 0.53,
+      "e2e_fps": 34.2
+    },
+    {
+      "model": "yolov8n",
+      "res_mode": "640",
+      "resolution": "640x640",
+      "params_m": 3.01,
+      "gflops": 8.2,
+      "model_latency_mean_ms": 9.76,
+      "model_latency_std_ms": 1.72,
+      "model_fps": 102.5,
+      "e2e_latency_mean_ms": 20.56,
+      "e2e_latency_std_ms": 0.95,
+      "e2e_fps": 48.6
+    },
+    {
+      "model": "fasterrcnn",
+      "res_mode": "640",
+      "resolution": "640x640",
+      "params_m": 41.31,
+      "gflops": 181.5,
+      "model_latency_mean_ms": 43.24,
+      "model_latency_std_ms": 1.15,
+      "model_fps": 23.1,
+      "e2e_latency_mean_ms": 56.01,
+      "e2e_latency_std_ms": 3.07,
+      "e2e_fps": 17.9
+    },
+    {
+      "model": "detr",
+      "res_mode": "640",
+      "resolution": "640x640",
+      "params_m": 41.5,
+      "gflops": 75.8,
+      "model_latency_mean_ms": 31.07,
+      "model_latency_std_ms": 1.19,
+      "model_fps": 32.2,
+      "e2e_latency_mean_ms": 70.37,
+      "e2e_latency_std_ms": 2.48,
+      "e2e_fps": 14.2
+    },
+    {
+      "model": "efficientdet",
+      "res_mode": "640",
+      "resolution": "640x640",
+      "params_m": 8.01,
+      "gflops": 13.4,
+      "model_latency_mean_ms": 46.08,
+      "model_latency_std_ms": 2.93,
+      "model_fps": 21.7,
+      "e2e_latency_mean_ms": 72.5,
+      "e2e_latency_std_ms": 3.72,
+      "e2e_fps": 13.8
+    }
+  ],
+  "fvcore_checks": {
+    "fasterrcnn_640": {
+      "thop_gflops": 181.45,
+      "fvcore_macs_gflops": 90.74,
+      "fvcore_2x_gflops": 181.48,
+      "unsupported_ops": {
+        "aten::sub": 72,
+        "aten::div": 14,
+        "aten::_shape_as_tensor": 6,
+        "aten::min": 11,
+        "aten::reciprocal": 2,
+        "aten::mul": 206,
+        "aten::ceil": 2,
+        "aten::pad": 1,
+        "aten::add": 136,
+        "aten::rsqrt": 53,
+        "aten::max_pool2d": 2,
+        "aten::add_": 19,
+        "aten::fill_": 10,
+        "aten::meshgrid": 5,
+        "aten::exp": 4,
+        "aten::expand_as": 2,
+        "aten::topk": 5,
+        "aten::sigmoid": 1,
+        "aten::where": 12,
+        "prim::CallFunction": 2,
+        "aten::sqrt": 1,
+        "aten::log2": 1,
+        "torchvision::roi_align": 4,
+        "aten::scatter": 4,
+        "aten::softmax": 1
+      }
+    },
+    "detr_640": {
+      "thop_gflops": 75.84,
+      "fvcore_macs_gflops": 37.92,
+      "fvcore_2x_gflops": 75.84,
+      "unsupported_ops": {
+        "aten::add": 164,
+        "aten::rsqrt": 53,
+        "aten::mul": 162,
+        "aten::sub": 53,
+        "aten::max_pool2d": 1,
+        "aten::add_": 16,
+        "aten::cumsum": 2,
+        "aten::div": 6,
+        "aten::pow": 1,
+        "aten::sin": 2,
+        "aten::cos": 2,
+        "aten::new_ones": 2,
+        "aten::scaled_dot_product_attention": 18,
+        "aten::repeat": 1,
+        "aten::sigmoid": 1
+      }
+    }
+  },
+  "yolo_overhead_investigation": {
+    "decode_ms": 9.56,
+    "models": {
+      "yolov8n": {
+        "square_640_total_ms": 14.55,
+        "square_640_internal_speed": {
+          "preprocess": 2.86,
+          "inference": 6.91,
+          "postprocess": 1.4
+        },
+        "rect_320_total_ms": 9.77,
+        "rect_320_internal_speed": {
+          "preprocess": 1.17,
+          "inference": 6.68,
+          "postprocess": 1.58
+        }
+      },
+      "yolov8m": {
+        "square_640_total_ms": 19.59,
+        "square_640_internal_speed": {
+          "preprocess": 3.02,
+          "inference": 14.27,
+          "postprocess": 1.81
+        },
+        "rect_320_total_ms": 12.22,
+        "rect_320_internal_speed": {
+          "preprocess": 1.29,
+          "inference": 8.56,
+          "postprocess": 1.71
+        }
+      }
+    }
+  }
+}

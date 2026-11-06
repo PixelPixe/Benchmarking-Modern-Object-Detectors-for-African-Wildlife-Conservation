@@ -1,0 +1,5 @@
+Split,Images,Buffalo,Elephant,Rhino,Zebra,Total Instances
+Train,1152,402,585,421,630,2038
+Val,144,65,73,50,81,269
+Test,145,57,83,54,89,283
+Total,1441,524,741,525,800,2590
