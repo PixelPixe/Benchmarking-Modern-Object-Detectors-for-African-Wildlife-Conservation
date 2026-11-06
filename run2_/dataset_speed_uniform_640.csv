@@ -1,0 +1,6 @@
+model,resolution,forward_median_ms,forward_iqr_ms,forward_fps,e2e_median_ms,e2e_iqr_ms,e2e_fps,forward_mean_ms,forward_std_ms,e2e_mean_ms,e2e_std_ms
+yolov8m,640x640,14.8,0.9,67.7,22.7,4.6,44.1,15.67,1.91,24.84,10.27
+yolov8n,640x640,11.1,1.6,89.8,17.3,6.6,57.8,11.36,1.4,19.31,6.6
+fasterrcnn,640x640,44.4,1.7,22.5,47.5,13.9,21.0,45.59,4.48,53.2,16.09
+detr,640x640,35.3,2.8,28.3,64.7,19.2,15.5,36.01,3.4,68.21,14.82
+efficientdet,640x640,65.6,6.4,15.3,90.2,11.4,11.1,66.66,6.72,92.77,9.92

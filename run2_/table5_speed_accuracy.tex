@@ -1,0 +1,23 @@
+\begin{table*}[htbp]
+\centering
+\caption{Comprehensive Speed, Accuracy, and Complexity Benchmark on African Wildlife Test Set. Accuracy metrics are evaluated at each model's native resolution. Throughput (FPS) is benchmarked under controlled conditions on an NVIDIA GeForce RTX 4050 Laptop GPU (6\,GB VRAM, Driver 610.74, P0 performance state, clock: $2130\,\text{MHz}$ graphics / $8001\,\text{MHz}$ memory, temperature: $48\text{--}52^\circ\text{C}$, power draw: $12\text{--}42\,\text{W}$) with batch size 1 and FP32 precision. Latencies averaged over 200 timed iterations following 50 warm-up runs with explicit CUDA synchronization. We report throughput at both native resolution and uniform $640 \times 640$ resolution. Best values across each metric are highlighted in \textbf{bold}.}
+\label{tab:speed_benchmark}
+\small
+\renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lcccccccccc}
+\toprule
+ & \multicolumn{3}{c}{\textbf{Detection Accuracy (Native)}} & \textbf{Native} & \multicolumn{2}{c}{\textbf{Native Res. FPS}} & \multicolumn{2}{c}{\textbf{Uniform $640^2$ FPS}} & \textbf{Params} & \textbf{GFLOPs} \\
+\cmidrule(lr){2-4} \cmidrule(lr){6-7} \cmidrule(lr){8-9}
+\textbf{Model} & \textbf{mAP@[.5:.95]} & \textbf{AP\textsubscript{50}} & \textbf{AP\textsubscript{75}} & \textbf{Resolution} & \textbf{Model\textsuperscript{\textdagger}} & \textbf{E2E\textsuperscript{\textdaggerdbl}} & \textbf{Model\textsuperscript{\textdagger}} & \textbf{E2E\textsuperscript{\textdaggerdbl}} & \textbf{(M)} & \textbf{($640^2$)\textsuperscript{*}} \\
+\midrule
+YOLOv8m & \textbf{0.777} & \textbf{0.904} & \textbf{0.848} & 640x640 & 67.2 & 33.8 & 67.0 & 34.2 & 25.86 & 79.1 \\
+YOLOv8n & 0.744 & 0.886 & 0.816 & 640x640 & \textbf{104.9} & \textbf{48.1} & \textbf{102.5} & \textbf{48.6} & \textbf{3.01} & \textbf{8.2} \\
+Faster R-CNN & 0.702 & 0.901 & 0.830 & 800x1333 & 12.4 & 9.2 & 23.1 & 17.9 & 41.31 & 181.5 \\
+DETR & 0.675 & 0.858 & 0.743 & 800x1333 & 17.4 & 7.4 & 32.2 & 14.2 & 41.50 & 75.8 \\
+EfficientDet-D2 & 0.597 & 0.849 & 0.686 & 512x512 & 21.9 & 14.1 & 21.7 & 13.8 & 8.01 & 13.4 \\
+\bottomrule
+\multicolumn{11}{l}{\footnotesize \textsuperscript{\textdagger} Model-only forward pass throughput. \textsuperscript{\textdaggerdbl} End-to-end throughput including image decode, preprocessing (resizing/normalization), and postprocessing (NMS/Hungarian).} \\
+\multicolumn{11}{l}{\footnotesize \textsuperscript{*} GFLOPs computed via standard convention ($\text{FLOPs} = 2 \times \text{MACs}$) at $640 \times 640$. Cross-checked with \texttt{fvcore}; see text for attention and RoIAlign accounting.} \\
+\end{tabular}
+\end{table*}

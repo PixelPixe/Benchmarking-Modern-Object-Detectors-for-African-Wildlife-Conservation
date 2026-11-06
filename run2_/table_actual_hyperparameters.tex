@@ -1,0 +1,35 @@
+% Replacement for Tables 3 and 4 in paper/main.tex
+% Documents the ACTUAL training hyperparameters used for the existing baseline checkpoints.
+% Sourced directly from train_*.py scripts, checkpoints/yolov8*/args.yaml, and run logs.
+% No 'Default' or 'N/A'; input resolution reflects actual dimensions (640x640 only where true).
+
+\begin{table*}[htbp]
+\centering
+\caption{Actual Training Hyperparameters Used Across Evaluated Architectures}
+\label{tab:actual_hyperparameters}
+\small
+\renewcommand{\arraystretch}{1.25}
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Hyperparameter} & \textbf{YOLOv8m} & \textbf{YOLOv8n} & \textbf{Faster R-CNN} & \textbf{EfficientDet-D2} & \textbf{DETR} \\
+\midrule
+Backbone & C2f CSP ($d{=}0.67, w{=}0.75$) & C2f CSP ($d{=}0.33, w{=}0.25$) & ResNet-50 FPN & EfficientNet-B2 & ResNet-50 + Trans. \\
+Pretrained Weights & COCO (`yolov8m.pt`) & COCO (`yolov8n.pt`) & COCO (V1) & ImageNet (backbone only) & COCO (reinit head) \\
+Input Resolution & $640 \times 640$ & $640 \times 640$ & $800\text{--}1333$\,px\textsuperscript{\textdagger} & $512 \times 512$ & $800\text{--}1333$\,px\textsuperscript{\textdaggerdbl} \\
+Batch Size & 4 & 4 & 2 & 2 & 2 \\
+Optimizer & AdamW & AdamW & SGD (momentum 0.9) & AdamW & AdamW \\
+Initial Learning Rate & 0.001 & 0.001 & 0.005 & 0.0001 & $10^{-5}$ (bb) / $10^{-4}$ (heads) \\
+Learning Rate Schedule & Cosine (warmup 3) & Cosine (warmup 3) & StepLR (step 30, $\gamma{=}0.1$) & CosineAnnealing & StepLR (step 70, $\gamma{=}0.1$) \\
+Weight Decay & 0.0005 & 0.0005 & 0.0005 & 0.00001 & 0.0001 \\
+AMP (Mixed Precision) & Enabled & Enabled & Disabled (FP32) & Disabled (FP32) & Disabled (FP32) \\
+Epochs & 100 & 100 & 100 & 100 & 100 \\
+Augmentation Policy & Mosaic, Mixup, HSV, Scale & Mosaic, Mixup, HSV, Scale & None & H-Flip ($p{=}0.5$) & None \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\footnotesize
+\textsuperscript{\textdagger} TorchVision \texttt{GeneralizedRCNNTransform} internally rescales input images to shortest edge 800\,px, maximum edge 1333\,px. \\
+\textsuperscript{\textdaggerdbl} Hugging Face \texttt{DetrImageProcessor} default shortest edge 800\,px, longest edge 1333\,px.
+\end{flushleft}
+\end{table*}

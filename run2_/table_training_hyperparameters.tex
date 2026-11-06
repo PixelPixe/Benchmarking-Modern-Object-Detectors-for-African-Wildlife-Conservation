@@ -1,0 +1,32 @@
+% Replacement for Tables 3 and 4 in paper/main.tex
+% Incorporates fully resolved hyperparameters, eliminates 'Default' and 'N/A',
+% and reflects the harmonized 640x640 resolution across all architectures.
+
+\begin{table*}[htbp]
+\centering
+\caption{Harmonized Training Hyperparameters Across Evaluated Architectures}
+\label{tab:training_hyperparameters}
+\small
+\renewcommand{\arraystretch}{1.25}
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Hyperparameter} & \textbf{YOLOv8m} & \textbf{YOLOv8n} & \textbf{Faster R-CNN} & \textbf{EfficientDet-D2} & \textbf{DETR} \\
+\midrule
+Backbone & C2f CSP ($d{=}0.67$) & C2f CSP ($d{=}0.33$) & ResNet-50 FPN & EfficientNet-B2 & ResNet-50 + Trans. \\
+Pretrained Weights & COCO & COCO & COCO (V1) & ImageNet (backbone) & COCO (reinit head) \\
+Input Resolution & $640 \times 640$ & $640 \times 640$ & $640 \times 640$ & $640 \times 640$ & $640 \times 640$ \\
+Batch Size & 4 & 4 & 2 & 2 & 2 \\
+Optimizer & AdamW & AdamW & SGD (mom. 0.9) & AdamW & AdamW \\
+Initial Learning Rate & 0.001 & 0.001 & 0.005 & 0.0001 & $10^{-5}$ / $10^{-4}$ \\
+Learning Rate Schedule & Cosine Anneal & Cosine Anneal & StepLR (step 30) & Cosine Anneal & StepLR (step 70) \\
+Warmup Epochs & 3 & 3 & None & None & None \\
+Weight Decay & 0.0005 & 0.0005 & 0.0005 & 0.00001 & 0.0001 \\
+AMP (Mixed Precision) & Enabled & Enabled & Enabled & Enabled & Enabled \\
+Standard Epochs & 100 & 100 & 100 & 100 & 100 \\
+Extended Schedule & --- & --- & --- & --- & 300 epochs (step 200) \\
+Augmentations & H-Flip, Color, Scale & H-Flip, Color, Scale & H-Flip, Color & H-Flip, Color & H-Flip, Color \\
+Mosaic / Mixup & Disabled (Fair) & Disabled (Fair) & None & None & None \\
+\bottomrule
+\end{tabular}
+\end{table*}

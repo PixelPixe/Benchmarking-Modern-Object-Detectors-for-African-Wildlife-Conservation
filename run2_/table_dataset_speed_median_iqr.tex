@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+\centering
+\caption{Dataset-Wide Inference Speed Evaluated at Native Resolution Across All $N=145$ African Wildlife Test Images. In addition to mean and standard deviation, we report the median and interquartile range (IQR = Q\textsubscript{75} - Q\textsubscript{25}) to robustly capture latency across varying image aspect ratios and resolutions. All runs include image decoding (\texttt{cv2.imdecode}), preprocessing, neural network forward pass, and postprocessing on an NVIDIA GeForce RTX 4050 Laptop GPU (batch size 1, FP32).}
+\label{tab:dataset_speed_median_iqr}
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Model} & \textbf{Native Res.} & \textbf{Model Median (IQR) ms} & \textbf{Model Mean $\pm$ Std ms} & \textbf{E2E Median (IQR) ms} & \textbf{E2E Mean $\pm$ Std ms} & \textbf{Median E2E FPS} \\
+\midrule
+YOLOv8m & 640x640 & 14.3 (0.2) & 14.3 $\pm$ 0.3 & 20.4 (2.9) & 21.7 $\pm$ 3.3 & \textbf{49.1} \\
+YOLOv8n & 640x640 & 7.4 (0.6) & 7.6 $\pm$ 0.7 & 13.6 (2.7) & 14.9 $\pm$ 3.4 & \textbf{73.7} \\
+Faster R-CNN & 800-1333 & 90.1 (8.7) & 88.7 $\pm$ 7.2 & 95.7 (10.6) & 97.9 $\pm$ 12.4 & \textbf{10.4} \\
+DETR & 800-1333 & 63.8 (8.1) & 62.6 $\pm$ 5.8 & 130.9 (20.9) & 132.4 $\pm$ 16.4 & \textbf{7.6} \\
+EfficientDet-D2 & 512x512 & 46.7 (3.5) & 49.0 $\pm$ 16.0 & 60.8 (7.6) & 63.9 $\pm$ 16.9 & \textbf{16.4} \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,20 @@
+\begin{table}[htbp]
+\centering
+\caption{Paired Bootstrap Evaluation ($B=1{,}000$ iterations over $N=145$ test images) comparing YOLOv8m against Faster R-CNN and YOLOv8n. We report the empirical point difference $\Delta$, the bootstrap standard error (SE), the 95\% percentile confidence interval $[\text{CI}_{2.5\%}, \text{CI}_{97.5\%}]$, and two-tailed Wald $p$-values. \textbf{Note}: These intervals reflect test-set sampling variability only (conditional on fixed model checkpoints); they do not account for training stochasticity across random seeds.}
+\label{tab:bootstrap_ci}
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{llcccc}
+\toprule
+\textbf{Comparison} & \textbf{Metric} & $\bm{\Delta}$ \textbf{(Point)} & \textbf{Bootstrap SE} & \textbf{95\% Confidence Interval} & $\bm{p}$\textbf{-value} \\
+\midrule
+YOLOv8m vs. Faster R-CNN & mAP@[.5:.95] & +0.076 & 0.0121 & [+0.051, +0.098] & < 0.001 \\
+YOLOv8m vs. Faster R-CNN & AP\textsubscript{50} & +0.003 & 0.0113 & [-0.022, +0.024] & 0.764 \\
+YOLOv8m vs. Faster R-CNN & AP\textsubscript{75} & +0.018 & 0.0164 & [-0.017, +0.049] & 0.267 \\
+\midrule
+YOLOv8m vs. YOLOv8n & mAP@[.5:.95] & +0.033 & 0.0115 & [+0.008, +0.055] & 0.004 \\
+YOLOv8m vs. YOLOv8n & AP\textsubscript{50} & +0.019 & 0.0109 & [-0.006, +0.038] & 0.088 \\
+YOLOv8m vs. YOLOv8n & AP\textsubscript{75} & +0.032 & 0.0185 & [-0.004, +0.068] & 0.083 \\
+\bottomrule
+\end{tabular}
+\end{table}

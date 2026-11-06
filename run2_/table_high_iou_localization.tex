@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+\centering
+\caption{Detailed Localization Analysis Across Strict IoU Thresholds on African Wildlife Test Set ($N=145$). While Faster R-CNN matches YOLOv8 at standard IoU thresholds ($\text{AP}_{50}$ and $\text{AP}_{75}$), its localization precision degrades sharply at ultra-strict thresholds ($\text{AP}_{85}$, $\text{AP}_{90}$, $\text{AP}_{95}$), clarifying the localization behavior across architectures.}
+\label{tab:high_iou_localization}
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Model} & \textbf{mAP@[.5:.95]} & \textbf{AP\textsubscript{50}} & \textbf{AP\textsubscript{75}} & \textbf{AP\textsubscript{85}} & \textbf{AP\textsubscript{90}} & \textbf{AP\textsubscript{95}} \\
+\midrule
+YOLOv8m & \textbf{0.777} & \textbf{0.904} & \textbf{0.848} & \textbf{0.741} & \textbf{0.596} & \textbf{0.320} \\
+YOLOv8n & 0.744 & 0.886 & 0.816 & 0.680 & 0.556 & 0.255 \\
+Faster R-CNN & 0.702 & 0.901 & 0.830 & 0.611 & 0.305 & 0.048 \\
+DETR & 0.675 & 0.858 & 0.743 & 0.604 & 0.453 & 0.171 \\
+EfficientDet-D2 & 0.597 & 0.849 & 0.686 & 0.467 & 0.204 & 0.023 \\
+\bottomrule
+\end{tabular}
+\end{table}
