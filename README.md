@@ -67,7 +67,3 @@ Python 3.11, PyTorch 2.6.0, CUDA 12.4, TorchVision 0.21.0, Ultralytics 8.4.23,
 Hugging Face Transformers 4.49.0, pycocotools 2.0.8.
 
 
-
-## Authors
-
-[Add names, or leave blank until the paper is published.]
